@@ -4,7 +4,7 @@ import './Card.css'
 const PromotionCard = ({ promotion }) => {
     return (
         <div className="promotion-card">
-            <img className="promotion-card__img" src={promotion.imageUrl} />
+            <img className="promotion-card__img" src={promotion.imageUrl} alt={promotion.title} />
             <div className="promotion-card__info">
                 <h1 className="promotion-card__title">
                     {promotion.title}
@@ -20,7 +20,7 @@ const PromotionCard = ({ promotion }) => {
                     <div className='promotion-card__comments-count'>
                         {promotion.comments.length} Comentário{promotion.comments.length > 1 ? 's' : null}
                     </div>
-                    <a className='promotion-card__link' href={promotion.url} TARGET="_blanck" >
+                    <a className='promotion-card__link' href={promotion.url} target="_blanck" rel="noopener noreferrer" >
                         IR PARA O SITE
                     </a>
                 </footer>
